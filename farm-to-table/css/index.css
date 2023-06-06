@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    /*respect width I give to elements- add padding and border with that*/
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    /* you can never be bigger than your parent element */
+    /* border: 1px solid grey; */
+
+}
+
+/* 
+% based on the parent element 
+ems - muliply off their parent -nested font sizes get out of hand
+rems - have a base arent of HTML and everything else is based off of it
+vh/vw - viewheight and view width based off the viewport
+px - hard coded - fixed values
+
+Brit's rules
+% for everything
+rems for fonts
+*/
+
+html {
+    font-size: 62.5%;
+    /* 1 rem === 10px */
+    /* user can make the fonts bigger, can't with px*/
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* font-size multiplied by 1.5 and adds space in-between lines */
+    color: #444;
+    background-color: #fffafa;
+}
+
+/* General Styles */
+
+h1,
+h2,
+h3 {
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 5rem;
+    /* 50 px */
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+section,
+footer {
+    padding: 4% 0;
+    /* based of the body  */
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    transition: 2s;
+}
+
+a:visited {
+    color: #444;
+}
+
+a:hover {
+    color: #fcb131;
+}
+
+i {
+    font-size: 5rem;
+}
+
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* End General Styles */
+
+/* Header Section Styles */
+header nav {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    top: 0;
+}
+
+.links {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* End Header Section Styles */
+
+
+/* Top Section Styles */
+#top {
+    height: 85vh;
+    background-image: url("../images/header.jpg");
+    background-position: center top;
+    /* can take 2 properties first center then start at top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.5%;
+}
+
+.titles {
+    width: 30%;
+}
+
+/* End Top Section Styles */
+
+/* Farm Fresh Section Styles */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.box {
+    width: 20%;
+    border: 3px solid #4f4f4f;
+    background-color: #fff;
+    padding: 4%;
+    text-align: center;
+}
+
+/* End Farm Fresh Section Styles */
+
+/* hero image section */
+.hero-image {
+    height: 40vh;
+    background-image: url("../images/dirt.jpg");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* end hero image section */
+
+
+/* About Section styles*/
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about div {
+    width: 60%;
+    padding: 4%;
+    border: 3px solid #4f4f4f;
+    background-color: #fff;
+}
+
+#about div p {
+    margin-top: 5%;
+}
+
+/* End About section */
+
+/* Classes section */
+
+.classes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.class {
+    width: 40%;
+    height: 35vh;
+    margin: 2% 0;
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+}
+
+.class div.hide {
+    width: 40%;
+    height: 10vh;
+    background-color: #fff;
+    text-align: center;
+    display: none;
+}
+
+
+.class:hover div.hide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.farm {
+    background-image: url('../images/barn.jpg');
+}
+
+.cooking {
+    background-image: url('../images/cook.jpg');
+}
+
+.produce {
+    background-image: url('../images/produce.jpg');
+    background-position: bottom;
+}
+
+.animals {
+    background-image: url('../images/sheep.jpg');
+}
+
+/* End Classes section */
+
+/* Contact section styles */
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact h2 {
+    width: 100%;
+}
+
+.left,
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 0;
+}
+
+.left div {
+    width: 40%;
+    line-height: 2;
+}
+
+.right img {
+    width: 60%;
+}
+
+/* End Contact section styles */
+
+
+/* Footer */
+
+footer {
+    background-color: #fcb131;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    color: #fff
+}
+
+footer a:visited {
+    color: #fff
+}
+
+footer a:hover {
+    color: #444;
+}
+
+footer div {
+    width: 33%;
+}
+
+nav.social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav a {
+    margin: 2% 0;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
